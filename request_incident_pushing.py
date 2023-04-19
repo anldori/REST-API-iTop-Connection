@@ -1,9 +1,6 @@
 import requests
 import json
 
-url = "http://172.10.0.228/webservices/rest.php?version=1.3&json_data=%s"
-username = "username here"
-password = "password here"
 
 json_data = {
     "operation": "core/create",
@@ -27,6 +24,8 @@ json_data = {
 
 
 url = "http://<your itop portal>/webservices/rest.php?version=1.3&json_data=%s" % str(json_data).replace("'", "\"")
+username = "username here"
+password = "password here"
 
 response = requests.post(url, auth=(username, password))
 
